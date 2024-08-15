@@ -1,0 +1,22 @@
+Install Snorby:
+                sudo apt-get install snorby
+Configure Snorby to connect to the Snort database:
+                sudo nano /etc/snorby/snorby.conf
+Add the following lines to the file:
+                 database: snort
+                 host: localhost
+                 username: snort
+                 password: snort
+Start Snorby:
+                  sudo service snorby start
+Install BASE:
+                  sudo apt-get install base
+Configure BASE to connect to the Snort database:
+                   sudo nano /etc/base/base.conf
+Add the following lines to the file:
+                   db_host=localhost
+                   db_database=snort
+                   db_username=snort
+                   db_password=snort
+Start BASE:
+                   sudo service base start
